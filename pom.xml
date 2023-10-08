@@ -15,7 +15,7 @@
     </properties>
     
     <dependencies>
-     
+        
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
@@ -28,6 +28,16 @@
             <version>2.34</version>
         </dependency>
         <!-- Asegúrate de usar la versión más reciente o la que necesites -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.34</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.34</version>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -54,14 +64,9 @@
             <artifactId>javax.ws.rs-api</artifactId>
             <version>2.1</version>
         </dependency>
-     
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-server</artifactId>
-            <version>2.27</version>
-            <scope>provided</scope>
-        </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -109,17 +114,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat9-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <url>http://localhost:8080/manager/text</url>
-                    <server>miservidor</server>
-                    <path>/miapp</path>
-                </configuration>
-            </plugin>
         </plugins>
-    </build>
 
+    </build>
 </project>
